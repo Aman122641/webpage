@@ -94,17 +94,11 @@
             var newWindow = window.open('about:blank');
             var iframe = document.createElement('iframe');
             iframe.src = 'https://bryantgpv2.onrender.com/chat/';
-            iframe.style.width = '100%';
-            iframe.style.height = '100%';
-
-  // Set the position of the wrapper to 'absolute'
-            var wrapper = document.createElement('div');
-            wrapper.style.position = 'absolute';
-            wrapper.style.width = '100%';
-            wrapper.style.height = '100%';
-            wrapper.appendChild(iframe);
-
-            newWindow.document.body.appendChild(wrapper);
+            iframe.style.width = '100vw';
+            iframe.style.height = '100vh';
+            iframe.style.border = 'none';
+            newWindow.document.body.style.margin = '0';
+            newWindow.document.body.appendChild(iframe);
 
 
         }
