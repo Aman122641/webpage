@@ -7,6 +7,9 @@
     <style>
         body {
             margin: 0;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
             height: 100vh;
             background: linear-gradient(45deg, #6a0dad, #e6e6fa);
             background-size: 400% 400%;
@@ -92,9 +95,11 @@
             iframe.style.width = '100vw';
             iframe.style.height = '100vh';
             iframe.style.border = 'none';
+            iframe.style.overflow = 'hidden'; // Add this line to prevent scrolling
             newWindow.document.body.style.margin = '0';
             newWindow.document.body.appendChild(iframe);
         }
+
     </script>
 
 </body>
