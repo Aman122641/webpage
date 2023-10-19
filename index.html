@@ -95,10 +95,24 @@
             iframe.style.width = '100vw';
             iframe.style.height = '100vh';
             iframe.style.border = 'none';
-            iframe.style.overflow = 'hidden'; // Add this line to prevent scrolling
+    
+            newWindow.document.documentElement.style.margin = '0';
             newWindow.document.body.style.margin = '0';
-            newWindow.document.body.appendChild(iframe);
+            newWindow.document.body.style.height = '100%';
+            newWindow.document.body.style.overflow = 'hidden';
+    
+            var wrapper = newWindow.document.createElement('div');
+            wrapper.className = 'wrapper';
+            wrapper.style.position = 'absolute';
+            wrapper.style.top = '0';
+            wrapper.style.left = '0';
+            wrapper.style.width = '100%';
+            wrapper.style.height = '100%';   
+    
+            wrapper.appendChild(iframe);
+            newWindow.document.body.appendChild(wrapper);
         }
+
 
     </script>
 
