@@ -89,34 +89,15 @@
     <button onclick="openChatGPT()">Open ChatGPT</button>
     <script>
         function openChatGPT() {
-            // Open a new blank window
             var newWindow = window.open('about:blank');
-
-            // Set styles for newWindow to prevent scrolling
-            newWindow.document.documentElement.style.margin = '0';
-            newWindow.document.body.style.margin = '0';
-            newWindow.document.body.style.overflow = 'hidden';
-
-            // Create an iframe and set its properties
             var iframe = document.createElement('iframe');
             iframe.src = 'https://bryantgpv2.onrender.com/chat/';
-            iframe.style.width = '100vw';
-            iframe.style.height = '100vh';
-            iframe.style.border = 'none';
-            // Create a wrapper div to hold the iframe
-            var wrapper = newWindow.document.createElement('div');
-            wrapper.style.position = 'absolute';
-            wrapper.style.top = '0';
-            wrapper.style.left = '0';
-            wrapper.style.width = '100%';
-            wrapper.style.height = '100%';
-
-            // Append the iframe to the wrapper
-            wrapper.appendChild(iframe);
-
-            // Append the wrapper to the new window's body
-            newWindow.document.body.appendChild(wrapper);
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            newWindow.document.body.appendChild(iframe);
         }
+
+        
 
 
 
